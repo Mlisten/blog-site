@@ -31,7 +31,7 @@ import {ref} from "vue";
 import request, {MyAxiosResponse} from "../../commons/utils/request";
 import {ElMessage} from "element-plus";
 
-const msgs = ref([{id:1,datetime:"2012-12-12",msg:"你好",nickname:"李四"}])
+const msgs = ref([])
 
 const newMsg = ref("")
 const nickname = ref("")
