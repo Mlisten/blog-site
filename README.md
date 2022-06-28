@@ -1,16 +1,35 @@
-# Vue 3 + TypeScript + Vite
+## 个人博客的HTML页面
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+###项目结构
+```
+    src
+     |--- admin  后台页面
+            |--- components 组件
+            |--- page       vue页面
+     |--- assets 静态资源
+     |--- components 一个页面中，占据空间较大的组件，可复用的
+            |--- admin 后台页面中的
+     |--- commons 配置工具包
+            |--- config 配置
+            |--- router 路由，采用懒加载模式配置
+            |--- store  状态管理
+            |--- utils  工具类
+     |--- components 组件
+     |--- layout 大页面的容器（前台，后台，登录页）
+     |--- show  前台页面
+            |--- components 组件
+            |--- page vue页面
+     |--- App.vue 整个项目的入口路由
+     |--- main.ts 整个项目的入口ts文件
+    index.html    整个项目的入口
+    package.json  依赖管理
+    tsconfig.json
+    vite.config.ts 
+```
+项目大部分都以 setup + ts 的方式编写
 
-## Recommended IDE Setup
+该项目有一个前台展示页面和一个后台管理页面
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+前台页面负责 文章，评论查询，单个文章能添加评论
 
-## Type Support For `.vue` Imports in TS
-
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
-
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
-
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+后台页面对文章，用户，评论的操作
